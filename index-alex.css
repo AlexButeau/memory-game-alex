@@ -1,0 +1,95 @@
+/*CSS reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --margin-top: 25px;
+  --border: 1px solid black;
+}
+
+body {
+  font-family: Roboto, arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.play {
+  font-size: 40px;
+  border: var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.play .clicked {
+  /*here, change background color and color to make it look inactive*/
+}
+
+.dropdown.shown {
+  border: var(--border);
+  border-radius: 0 0 10px 10px;
+  padding: 15px 10px;
+  width: 300px;
+  position: relative;
+  top: -7px;
+  z-index: 0;
+  transition: all 0.5s ease-in, opacity 0s 0.4s;
+  height: 240px;
+}
+
+.dropdown.none {
+  height: 0px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+label[for='pseudo'] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.options label {
+  display: block;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+
+.rules {
+  margin-top: var(--margin-top);
+  border: var(--border);
+  border-radius: 10px;
+  padding: 10px;
+
+  width: 80%;
+  max-width: 600px;
+}
+
+.rules li {
+  line-height: 1.5em;
+  list-style: none;
+}
