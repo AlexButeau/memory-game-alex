@@ -1,99 +1,101 @@
 /*CSS reset*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*defining variables*/
 :root {
-  --background-color-header: rgb(52, 58, 64, 0);
-  --background-color-hover: rgba(238, 120, 66, 0.822);
-  --background-color-sections: rgba(238, 120, 66, 0.822);
-
-  --text-color-main: black;
-  --text-color-header: black;
+  --margin-top: 25px;
+  --border: 1px solid black;
+  --dark-blue-1: #3a7dd7;
+  --dark-blue-2: #2d62ce;
+  --purple: #7c74f3;
+  --sky-blue: #77f3fb;
+  --light-blue-1: #40ecfa;
+  --light-blue-2: #2bb5e2;
+  --grey-blue: #b7d5f1;
+  --light-pink: #e9d7e7;
+  --light-purple: #a9c6f7;
+  --white-grey: #e8f2fb;
+  --black-blue: #071024;
+  --header-footer: #1c2c3b;
 
   --text-font: Roboto, Arial;
 }
 
 /* Style the navigation menu */
 .topnav-wrapper {
-    width:100%;
-    background-color: var(--background-color-header,rgb(52, 58, 64));
-    overflow: hidden;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  background-color: var(--header-footer);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    /*position:fixed; always keeping the header on top of the page*/
+  /*position:fixed; always keeping the header on top of the page*/
 }
 
 .topnav {
-    overflow: hidden;
-    position: relative; /*we need to set postion as relative to be able to position things in absolute inside it*/
-    width:100%;
-    padding:4px;
-    margin:6px;
+  overflow: hidden;
+  position: relative; /*we need to set postion as relative to be able to position things in absolute inside it*/
+  width: 100%;
+  padding: 4px;
+  margin: 6px;
 }
-  
-  /* Hide the links inside the navigation menu (except for logo/home) - for mobile */
+
+/* Hide the links inside the navigation menu (except for logo/home) - for mobile */
 .topnav #myLinks {
-    display: none;
+  display: none;
 }
-  
-  /* Style navigation menu links - ALL the links inside the .topnav div, including the main title */
+
+/* Style navigation menu links - ALL the links inside the .topnav div, including the main title */
 .topnav a {
-    color: var(--text-color-header, white);
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
+  color: var(--white-grey, white);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
 }
-  
-  /* Style the hamburger menu */
+
+/* Style the hamburger menu */
 .topnav a.icon {
-    display: block;
-    position: absolute;
-    right: 5px;
-    top: 5px;
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 
-    border: var(--text-color-header) solid 1px;
-    border-radius:2px;
+  border: var(--white-grey) solid 1px;
+  border-radius: 2px;
 }
-  
-  /* Add a grey background color on mouse-over */
+
+/* Add a grey background color on mouse-over */
 .topnav a:hover {
-    background-color:var(--background-color-hover);
-    color: var(--text-color-main);
+  background-color: var(--grey-blue);
+  color: var(--black-blue);
 }
-  
-  /* Style the active link (or home/logo) */
+
+/* Style the active link (or home/logo) */
 .topnav h1.active > a {
-    font-size: 20px;
-    color: var(--text-color-header);
-    width: min-content;
-    white-space: nowrap;  
+  font-size: 20px;
+  width: min-content;
+  white-space: nowrap;
 }
-
-.topnav h1.active > a:hover {
-  color: var(--text-color-main);
-}
-
 
 /* Specific breakpoint for the burger menu */
 @media only screen and (min-width: 570px) {
-    /*changing the burger menu*/
-    .topnav #myLinks {
-      display : flex ;
-    }
-  
-    .topnav a.icon {
-      display:none;
-    }
-  
-   .topnav {
-     display: flex ;
-     justify-content: space-between;
-   }
+  /*changing the burger menu*/
+  .topnav #myLinks {
+    display: flex;
   }
+
+  .topnav a.icon {
+    display: none;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
