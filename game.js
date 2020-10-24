@@ -39,7 +39,6 @@ console.log(difficultyLevel);
 
 //here, create the array we need to pick from - here, we stock all the URLS for possible future images
 const stockingImages = [
-
   'images/hig_five1_small.jpg',
   'images/hig_five2_small.jpg',
   'images/hig_five3_small.jpg',
@@ -54,7 +53,6 @@ const stockingImages = [
   'images/hig_five5_small.jpg',
   'images/hig_five6_small.jpg',
   'images/hig_five7_small.jpg',
-
 ];
 
 let nbPairs = 0;
@@ -113,7 +111,7 @@ function createCard() {
 
     let cardBackElt = document.createElement('img');
     cardBackElt.classList.add('card-face', 'card-face-back');
-    cardBackElt.src = 'images/question_mark_orange.png';
+    cardBackElt.src = 'images/question_mark.png';
     cardElt.appendChild(cardBackElt);
   }
 }
@@ -139,7 +137,10 @@ for (let i = 0; i < cardTable.length; i += 1) {
     // console.log(imagesCompare[0].childNodes);
 
     if (nbCartesTestees === 2) {
-      if (imagesCompare[0].childNodes[0].src === imagesCompare[1].childNodes[0].src) {
+      if (
+        imagesCompare[0].childNodes[0].src ===
+        imagesCompare[1].childNodes[0].src
+      ) {
         for (let j = 0; j < imagesCompare.length; j += 1) {
           imagesCompare[j].classList.remove('enAttente');
           imagesCompare[j].classList.remove('disabled');

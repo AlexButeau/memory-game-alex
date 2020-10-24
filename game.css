@@ -2,35 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--text-font);
 }
 
 :root {
-  --background-color-header: rgb(52, 58, 64);
-  --background-color-hover: #ddd;
-  --background-color-sections: rgb(224, 224, 224);
-
-  --text-color-main: black;
-  --text-color-header: white;
-
-  --text-font: Roboto, Arial;
+  --margin-top: 25px;
+  --border: 1px solid black;
+  --dark-blue-1: #3a7dd7;
+  --dark-blue-2: #2d62ce;
+  --purple: #7c74f3;
+  --sky-blue: #77f3fb;
+  --light-blue-1: #40ecfa;
+  --light-blue-2: #2bb5e2;
+  --grey-blue: #b7d5f1;
+  --light-pink: #e9d7e7;
+  --light-purple: #a9c6f7;
+  --white-grey: #e8f2fb;
+  --black-blue: #071024;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  background-color:rgba(0, 0, 0, 0);
-  padding-left: 0px;
+  align-items: center;
   padding-right: 5px;
-  margin-bottom: 0;
-  margin: 0;
   list-style-type: none;
   height: 60px;
   text-decoration: none;
 }
 a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 li {
@@ -40,31 +41,35 @@ li {
 ul li {
   text-decoration: none;
   display: inline-block;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: rgb(0, 0, 0);
 }
 
+.exit {
+  width: 1.5em;
+}
+
 /*timer*/
 body {
-  background-image: url(images/high44.jpeg);
-  background-color: rgba(252, 252, 252, 0.3)
+  font-family: Roboto, arial, sans-serif;
+  background-image: url('images/background.png');
+  background-position: top 50% left 0;
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #timer {
-  margin: auto;
-  display: inline-block;
-  padding: 15px;
+  padding: 0 0 0 10px;
   font-weight: bold;
-  border-radius: 10px;
-  border: groove 2px black;
-  font-size: 20px;
-  text-shadow: 2px 2px 2px grey;
+  font-size: 22px;
 }
 .timersection {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   height: 60px;
   box-sizing: border-box;
@@ -95,6 +100,7 @@ body {
   cursor: url(images/high-five.png), pointer;
   transition: transform 1s;
   transform-style: preserve-3d;
+  box-shadow: 2px 2px 4px #15326b;
 }
 
 .card-face {
@@ -194,20 +200,32 @@ body {
 /*jeux en mode normal*/
 
 .replaysection {
-  height: 150px;
-  box-sizing: border-box;
-  text-align: center;
+  display: flex;
   padding-bottom: 50px;
 }
+
 .replay {
-  cursor: url(images/high-five.png), pointer;
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  margin: auto;
+  font-size: 20px;
+  background-color: var(--purple);
+  color: var(--white-grey);
+  padding: 10px 15px;
+  width: min-content;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 0 6px #20458fb0;
 }
-.replay:focus {
-  outline: none;
-}
+
 .replay:hover {
   cursor: url(images/high-five.png), pointer;
+}
+
+@media only screen and (min-width: 570px) {
+  .exit {
+    width: 50px;
+  }
+
+  ul li {
+    font-size: 25px;
+  }
 }

@@ -144,3 +144,11 @@ h2 {
   line-height: 1.5em;
   list-style: '🔹 ';
 }
+
+.alert {
+  display: none;
+  font-size: 16px;
+  color: rgba(238, 120, 66, 0.822);
+  text-align: center;
+  padding: 5px;
+}
