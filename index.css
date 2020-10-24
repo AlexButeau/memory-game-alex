@@ -30,8 +30,48 @@ body {
   background-attachment: fixed;
 }
 
+/*toggle bar styling*/
+.toggle-bar {
+  display: flex;
+  width: fit-content;
+  justify-content: space-around;
+}
+
+.toggle-lang {
+  font-size: 16px;
+}
+
+.toggle-space {
+  width: 35px;
+  background-color: var(--grey-blue);
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.toggle-button {
+  background-color: var(--dark-blue-1);
+  width: 20px;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.line-toggle-bar {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
 .main {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -109,8 +149,11 @@ input#pseudo {
 
 .start {
   background-color: var(--dark-blue-2);
+  min-width: min-content;
+  white-space: nowrap;
   width: 30%;
   height: 2em;
+  padding: 0 5px;
   border-radius: 4px;
   line-height: 2em;
   text-align: center;
