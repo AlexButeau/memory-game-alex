@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="lang" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,6 +38,15 @@
       </header>
 
       <div class="main">
+        <div class="line-toggle-bar">
+          <div class="toggle-bar">
+            <div class="toggle-lang">🇬🇧</div>
+            <div class="toggle-space">
+              <div class="toggle-button"></div>
+            </div>
+            <div class="toggle-lang">🇫🇷</div>
+          </div>
+        </div>
         <div
           class="button play"
           onclick="document.querySelector('.dropdown').classList.toggle('none');
@@ -48,7 +57,7 @@
         </div>
         <div class="dropdown none">
           <form action="">
-            <p>Choose a difficulty level:</p>
+            <p class="span-8">Choose a difficulty level:</p>
             <div class="options">
               <label for="noob">
                 <input
@@ -69,7 +78,7 @@
                   id="easy"
                   value="easy"
                 />
-                easy
+                <span class="span-9">easy</span>
               </label>
               <label for="normal"
                 ><input
@@ -84,40 +93,47 @@
               <label for="hard"
                 ><input
                   type="radio"
-                  class="difficulty"
+                  class="difficulty span-10"
                   name="difficulty"
                   id="hard"
                   value="hard"
                 />
-                hard</label
+                <span class="span-10">hard</span></label
               >
             </div>
             <label for="pseudo"
-              >Enter a name: <input type="text" id="pseudo" name="pseudo"
+              ><span class="span-2">Enter a name:</span>
+              <input type="text" id="pseudo" name="pseudo"
             /></label>
-            <div class="button start"><a href="game.html">Let's go!</a></div>
+            <div class="button start">
+              <a href="game.html" class="span-11">Let's go!</a>
+            </div>
             <div class="alert">You need to select a difficulty level</div>
           </form>
         </div>
 
         <div class="rules">
-          <h2>Rules</h2>
+          <h2 class="span-3">Rules</h2>
           <ul>
-            <li>
+            <li class="span-4">
               You have cards face down. The aim is to find the even cards within
               the time limit.
             </li>
-            <li>Click on a card to flip it over and find its twin.</li>
-            <li>
+            <li class="span-5">
+              Click on a card to flip it over and find its twin.
+            </li>
+            <li class="span-5-2">
               If you find the pair, the cards remain face up and you can
               continue.
             </li>
-            <li>
+            <li class="span-6">
               If you make a mistake, the last 2 cards turned over become hidden
               again.
             </li>
-            <li>Increase the difficulty if you want to add pairs of cards.</li>
-            <li>
+            <li class="span-7">
+              Increase the difficulty if you want to add pairs of cards.
+            </li>
+            <li class="span-7-2">
               Your score will be calculated according to the time it took you to
               find all the pairs.
             </li>
