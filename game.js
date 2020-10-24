@@ -224,7 +224,7 @@ let currentTime = new Date().getTime(); //here we'll have to get the score from 
 // console.log(lastItem);
 // console.log(score_time);
 
-document.getElementById('timer').innerHTML = 1 + ':' + 010;
+document.getElementById('timer').innerHTML = 3 + ':' + 010;
 startTimer();
 
 function startTimer() {
